@@ -1,5 +1,6 @@
 import 'package:animated_prj/examples/animated_builder.dart';
 import 'package:animated_prj/examples/no_builder.dart';
+import 'package:animated_prj/examples/use_package.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -58,6 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ExampleButton(
               title: 'No builder animation',
               newScreen: NoBuilderScreen(),
+            ),
+            ExampleButton(
+              title: 'Use package',
+              newScreen: UsePackageScreen(),
             ),
           ],
         ),
