@@ -20,14 +20,19 @@ class _NoBuilderScreenState extends State<NoBuilderScreen>
     _controller = AnimationController(
       duration: const Duration(seconds: 1),
       vsync: this,
-    )..addListener(() => setState(() {}));
+    )..addListener(_controllerListener);
     angle = Tween<double>(begin: 0.0, end: 2.0 * pi).animate(_controller);
   }
 
   @override
   void dispose() {
+    _controller.removeListener(_controllerListener);
     _controller.dispose();
     super.dispose();
+  }
+
+  _controllerListener() {
+    setState(() {});
   }
 
   @override

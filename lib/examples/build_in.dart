@@ -19,7 +19,7 @@ class _BuildInScreenState extends State<BuildInScreen> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             AnimatedRotation(
               turns: turns,
               duration: const Duration(seconds: 1),
