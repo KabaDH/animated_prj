@@ -13,7 +13,7 @@ class _NoBuilderScreenState extends State<NoBuilderScreen>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 
-  late final Animation<double> angle;
+  // late final Animation<double> angle;
   @override
   void initState() {
     super.initState();
@@ -21,7 +21,7 @@ class _NoBuilderScreenState extends State<NoBuilderScreen>
       duration: const Duration(seconds: 1),
       vsync: this,
     )..addListener(_controllerListener);
-    angle = Tween<double>(begin: 0.0, end: 2.0 * pi).animate(_controller);
+    // angle = Tween<double>(begin: 0.0, end: 2.0 * pi).animate(_controller);
   }
 
   @override
@@ -47,7 +47,7 @@ class _NoBuilderScreenState extends State<NoBuilderScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Transform.rotate(
-              angle: angle.value,
+              angle: _controller.value * 2.0 * pi,
               child: const FlutterLogo(
                 size: 50,
               ),

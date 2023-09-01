@@ -1,4 +1,5 @@
 import 'package:animated_prj/examples/animated_builder.dart';
+import 'package:animated_prj/examples/flutter_hooks.dart';
 import 'package:animated_prj/examples/no_builder.dart';
 import 'package:animated_prj/examples/use_package.dart';
 import 'package:flutter/material.dart';
@@ -63,6 +64,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ExampleButton(
               title: 'Use package',
               newScreen: UsePackageScreen(),
+            ),
+            ExampleButton(
+              title: 'Use package and hooks',
+              newScreen: UsePackageWithHooksScreen(),
             ),
           ],
         ),
